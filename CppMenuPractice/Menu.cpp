@@ -23,11 +23,11 @@ INT_PTR Menu::MenuProcedure(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 
 INT_PTR Menu::DialogBoxParam(HWND hWndParent)
 {
-	return ::DialogBoxParamW(
-					nullptr,
-					MAKEINTRESOURCE(IDD_DIALOG_MENU),
-					hWndParent,
-					MenuProcedure,
-					0);
+	return ::DialogBoxParam(
+		nullptr,
+		MAKEINTRESOURCE(IDD_DIALOG_MENU),
+		hWndParent,
+		MenuProcedure,
+		0);
 }
 

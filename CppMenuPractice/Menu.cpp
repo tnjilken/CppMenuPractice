@@ -1,5 +1,7 @@
 #pragma once
 #include "Menu.h"
+#include "Play.h"
+#include "windowsx.h"
 
 INT_PTR Menu::MenuProcedure(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 {
@@ -7,8 +9,20 @@ INT_PTR Menu::MenuProcedure(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 	case WM_COMMAND:
 		switch (wParam) {
 		case IDC_BUTTON_START:
-			EndDialog(hWnd, IDC_BUTTON_START);
+		{
+			// TODO: プレイ画面操作中はメニュー画面を触れなくする #3
+
+			Button_Enable(GetDlgItem(hWnd, IDC_BUTTON_START), FALSE);
+			Button_Enable(GetDlgItem(hWnd, IDC_BUTTON_STOP), FALSE);
+			Play p(1, 2);
+			p.DialogBoxParam(nullptr);
+
+			// TODO: プレイ画面操作中はメニュー画面を触れなくする #3
+			Button_Enable(GetDlgItem(hWnd, IDC_BUTTON_START), TRUE);
+			Button_Enable(GetDlgItem(hWnd, IDC_BUTTON_STOP), TRUE);
+
 			return true;
+		}
 		case IDC_BUTTON_STOP:
 		case IDCANCEL:
 			EndDialog(hWnd, IDCANCEL);

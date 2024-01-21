@@ -33,3 +33,8 @@
 
 # Visual Studio files
 *.vs
+
+# Debug files
+*/Debug/*
+*/Release/*
+*/x64/*

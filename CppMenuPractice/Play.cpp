@@ -1,5 +1,6 @@
 #pragma once
 #include "Play.h"
+#include "Player.h"
 
 INT_PTR Play::PlayProcedure(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 {
@@ -44,6 +45,12 @@ INT_PTR Play::PlayProcedure(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 		case IDC_BUTTON_PLAY_STOP:
 			EndDialog(hWnd, IDC_BUTTON_PLAY_STOP);
 			return true;
+		case IDC_BUTTON_PLAY_STATUS:
+		{
+			Player player("Player", 10, 11, 12, 13);
+			player.DialogBoxParam(hWnd);
+			return true;
+		}
 		default:
 			return false;
 		}

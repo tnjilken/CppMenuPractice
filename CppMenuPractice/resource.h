@@ -28,7 +28,6 @@
 #define IDC_EDIT_PLAYER_HITPOINT        1022
 #define IDC_EDIT_PLAYER_MAGICPOINT      1023
 #define IDC_EDIT_PLAYER_ATTACKPOINT     1024
-#define IDC_EDIT_PLAYER_NAME5           1025
 #define IDC_EDIT_PLAYER_DEFENCEPOINT    1025
 
 // Next default values for new objects

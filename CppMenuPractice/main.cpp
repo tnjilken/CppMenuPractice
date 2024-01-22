@@ -1,5 +1,4 @@
 #pragma once
-#include <Windows.h>
 #include "Menu.h"
 
 int APIENTRY wWinMain(_In_ HINSTANCE hInstance,

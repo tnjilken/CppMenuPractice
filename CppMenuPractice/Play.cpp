@@ -47,8 +47,8 @@ INT_PTR Play::PlayProcedure(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 			return true;
 		case IDC_BUTTON_PLAY_STATUS:
 		{
-			Player player("Player", 10, 11, 12, 13);
-			player.DialogBoxParam(hWnd);
+			Player player("Player", 100, 110, 120, 130);
+			player.DialogBoxParamW(hWnd);
 			return true;
 		}
 		default:
